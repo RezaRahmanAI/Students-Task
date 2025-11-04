@@ -113,7 +113,12 @@ public class Program
             Console.WriteLine($"{student.Name}");
         }
 
+        //Question 11
 
+        var topTwoStudent = students.OrderByDescending(s => s.Marks).Take(2);
+        Console.WriteLine("Top Two Students: ");
+        foreach (var i in topTwoStudent)
+            Console.WriteLine($"{i.Name}  {i.Marks}");
 
 
 
