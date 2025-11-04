@@ -32,6 +32,9 @@ Console.WriteLine("---- Top Student Marks ----");
 Console.WriteLine($"Highest Marks: {topStudent}");
 
 
+var topTwo = students.OrderByDescending(s => s.Marks).Take(2).ToList();
+
+
 Console.WriteLine("---- Query Syntax ----");
 
 // Query Syntax
@@ -42,7 +45,7 @@ foreach (var st in highScorers)
   Console.WriteLine($"Id: {st.Id}, Name: {st.Name}, Age: {st.Age}, Marks: {st.Marks}");
 }
 
-
+var topTwoQuery = (from s in students orderby s.Marks descending select s).Take(2);
 
 
 
