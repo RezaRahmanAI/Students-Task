@@ -48,7 +48,6 @@ foreach (var st in highScorers)
 var topTwoQuery = (from s in students orderby s.Marks descending select s).Take(2);
 
 
-
 public class Student
 {
   public int Id { get; set; }
