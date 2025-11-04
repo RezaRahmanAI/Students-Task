@@ -3,8 +3,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using MyStudentApp.Queries;
 
-class Student
+public class Student
 {
     public int Id { get; set; }
     public string? Name { get; set; }
@@ -31,6 +32,8 @@ public class Program
         Console.WriteLine("Students who are over 20 years old:");
         foreach (var i in ageOver20)
             Console.WriteLine(i.Name);
+
+        
 
         // Question 2
         var marksOver80 = students.Where(s => s.Marks >= 80);
@@ -121,7 +124,7 @@ public class Program
             Console.WriteLine($"{i.Name}  {i.Marks}");
 
 
-
+        StudentQuery.QuerySyntax(students);
 
     }
 }
